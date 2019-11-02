@@ -9,7 +9,7 @@ up:
 
 down:
 	@VERSION=$(VERSION) RELAYD_VERSION=$(WS_RELAY_VERSION) \
-	docker-compose -f ./docker/dev/compose.yml down
+	docker-compose -f ./docker/dev/compose.yml down --remove-orphans
 
 bash-db:
 	@docker exec -it db1 bash
